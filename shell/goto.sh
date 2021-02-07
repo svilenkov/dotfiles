@@ -471,7 +471,6 @@ for i in "${goto_aliases[@]}"
 	    complete -F _complete_goto_bash $i
 	  fi
 	elif [ -n "${ZSH_VERSION}" ]; then
-    echo "HEHE"
 	  compdef _complete_goto_zsh $i
 	else
 	  echo "Unsupported shell."
