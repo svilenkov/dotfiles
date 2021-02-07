@@ -39,4 +39,7 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - [./vim/install.sh]
-  - [./homebrew/install.sh]
+  - 
+    command: ./homebrew/install.sh
+    stderr: true
+    stdout: true
