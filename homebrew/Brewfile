@@ -23,6 +23,8 @@ brew 'pyenv-virtualenv'
 brew 'go'
 brew 'fzf'
 
+brew 'fd'
+
 brew 'tmux'
 brew 'wget'
 

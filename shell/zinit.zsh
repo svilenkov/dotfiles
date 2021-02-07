@@ -26,3 +26,7 @@ zinit snippet $HOME/.shell/aliases
 # sharkdp/bat
 zinit ice wait lucid as'command' from'gh-r' mv'bat* -> bat' pick'bat/bat'
 zinit light sharkdp/bat
+
+# fd
+zinit ice as"command" from"gh-r" mv"fd* -> fd" pick"fd/fd"
+zinit light sharkdp/fd
