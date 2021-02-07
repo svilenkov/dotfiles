@@ -1,0 +1,17 @@
+function fs() {
+  wc -c "$@" | awk '{ print $1 }' | gnumfmt --to=iec --suffix=B --format="%3f"
+}
+
+function xducks() {
+  du -ks * | awk '
+  function human(x) {
+      s="kMGTEPYZ";
+      while (x>=1000 && length(s)>1)
+          {x/=1024; s=substr(s,2)}
+      return int(x+0.5) substr(s,1,1)
+  }
+  {gsub(/^[0-9]+/, human($1)); print}'
+}
+
+alias duf='du -sk * | sort -n | perl -ne '\''($s,$f)=split(m{\t});for (qw(K M G)) {if($s<1024) {printf("%.1f",$s);print "$_\t$f"; last};$s=$s/1024}'\'
+alias duf2='du -sk .[!.]* *  | sort -n | perl -ne '\''($s,$f)=split(m{\t});for (qw(K M G)) {if($s<1024) {printf("%.1f",$s);print "$_\t$f"; last};$s=$s/1024}'\'

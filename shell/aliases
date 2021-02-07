@@ -1,0 +1,107 @@
+alias gr="grep -i --color"
+
+# Quicklook\
+alias qlreload='qlmanage -r'
+alias qllist='qlmanage -m plugins'
+
+alias GET='burl GET'
+alias HEAD='burl -I'
+alias POST='burl POST'
+alias PUT='burl PUT'
+alias PATCH='burl PATCH'
+alias DELETE='burl DELETE'
+alias OPTIONS='burl OPTIONS'
+
+# Ruby
+alias binst='bundle install'
+alias be='bundle exec'
+
+# Markdown viewer
+alias md='/Applications/Typora.app/Contents/MacOS/Typora'
+
+# Sorted files by size
+alias ducks='du -cks * | sort -rn | head'
+
+alias coffeelint_changed='git diff --name-only develop | grep coffee | xargs coffeelint -f config/coffeelint.json'
+
+# GIT
+alias gprp='git pull --rebase && git push'
+alias glast_tag='echo $(git describe $(git rev-list --tags --max-count=1))'
+alias gls='git stash list'
+
+# Last Wake Times
+alias lwakes='pmset -g log|grep -e " Sleep  " -e " Wake  " | tail -n 1'
+
+# Last Sleep Times
+function lsleep(){
+  pmset -g log | grep "Kernel Idle sleep preventers: -None-" | tail -n"$1"
+}
+
+# Random hash
+function rndp() {
+  PWD_SEED_1=$(head -c 16 /dev/urandom | base64)
+  PWD_SEED_2=$(head -c 16 /dev/urandom | shasum)
+  echo "$PWD_SEED_1$PWD_SEED_2" | gshuf | sed 's/[-+=/]//g' | tr -s " "
+}
+
+
+# History
+alias h='history'
+
+# File/Directory
+function find_last_used_file() {
+  find "$1" -type f -exec stat -lt "%Y-%m-%d" {} \+ | cut -d' ' -f6- | sort -n | tail -1
+}
+
+# cl
+alias cl='clear'
+
+function git_backup() {
+  gss | sed -e 's/^ //' | sed '/^D / d' | sed '/^AD / d' | awk '{print $2}' | tar -czf "$HOME/Dropbox/tmp-backups/`basename $PWD`.tar.gz" -T -
+}
+
+function hg_backup() {
+  hg status | sed -e 's/^ //' | awk '{print $2}' | tar -czf "$HOME/Dropbox/tmp-backups/`basename $PWD`.tar.gz" -T -
+}
+
+function hg_arch_backup() {
+	hg archive -t tgz "$HOME/Dropbox/hg-backups/`basename $PWD`.tar.gz"
+}
+
+alias cping="ping -c 1 1.1.1.1| head -n2 | tail -n1"
+
+alias k='kubectl'
+function ka() { kubectl $@ --all-namespaces }
+
+alias ldir="find ./ -type d -d 1"
+function mdr() {
+  echo "$1"
+  pandoc -t html "$1" | lynx -stdin
+}
+
+alias disable_spotlight_indexing="sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist"
+alias enable_spotlight_indexing="sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist"
+
+# Python
+alias py="python3"
+alias pym="py manage.py"
+
+alias bec="bundle exec rails c"
+alias bes="bundle exec rails s"
+alias sim="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
+
+# Postgres
+alias pgstart='pg_ctl -o "-p 5444" -D /usr/local/var/postgres -l logfile start'
+alias pgstop="pg_ctl -D /usr/local/var/postgres stop"
+
+function devim() {
+	printf "\e[H\e[2J\e[3J"
+	bash -c "vim -u NONE $@ || exit"
+	printf "\e[H\e[2J\e[3J"
+}
+
+alias gc='tmux send "git diff --cached" C-m \; split-window -h \; send "git commit; exit" C-m'
+alias gdc='git diff --cached'
+alias gss='~/.shell/git-st.sh'
+
+alias clean_xcode_devices='xcrun simctl delete unavailable'

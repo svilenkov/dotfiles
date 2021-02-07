@@ -1,0 +1,37 @@
+- defaults:
+    link:
+      relink: true
+
+- create:
+  - ~/.config
+  - ~/bin
+  - ~/.shell
+
+- clean: ['~']
+
+- link:
+    ~/.zshrc: zshrc
+
+    ~/.shell/zinit:
+      path: shell/zinit.zsh
+
+    ~/.p10k.zsh:
+      path: shell/p10k.zsh
+
+    ~/.shell/aliases:
+      path: shell/aliases
+
+    ~/.shell/helpers:
+      path: shell/helpers
+
+    ~/.shell/goto.sh:
+      path: shell/goto.sh
+
+    ~/.vimrc: vimrc
+
+    ~/.config/nvim/init.vim:
+      path: vim/init.vim
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [git clone https://github.com/ctrlpvim/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim]
