@@ -22,3 +22,7 @@ zinit light wfxr/forgit
 
 zinit ice wait'0b' atinit="source_aliases" lucid
 zinit snippet $HOME/.shell/aliases
+
+# sharkdp/bat
+zinit ice wait lucid as'command' from'gh-r' mv'bat* -> bat' pick'bat/bat'
+zinit light sharkdp/bat
