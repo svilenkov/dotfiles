@@ -1,0 +1,9 @@
+[user]
+	name = Igor
+	email = svilenkov@users.noreply.github.com
+[diff]
+	tool = meld
+[merge]
+	tool = opendiff
+[pull]
+	rebase = true
