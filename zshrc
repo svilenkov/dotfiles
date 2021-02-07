@@ -89,6 +89,7 @@ export PATH="$PATH:$HOME/.rvm/bin:$GOPATH/bin"
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 export PATH="/usr/local/sbin:$HOME/Scripts:$HOME/openocd/bin::$PATH"
 export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
 
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
