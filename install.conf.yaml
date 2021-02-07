@@ -4,6 +4,7 @@
 
 - create:
   - ~/.config
+  - ~/.config/nvim
   - ~/bin
   - ~/.shell
 
@@ -37,4 +38,5 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [git clone https://github.com/ctrlpvim/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim]
+  - [./vim/install.sh]
+  - [./homebrew/install.sh]
