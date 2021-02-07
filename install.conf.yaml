@@ -43,3 +43,9 @@
     command: ./homebrew/install.sh
     stderr: true
     stdout: true
+  -
+    description: Setup OSX defaults
+    stderr: true
+    stdout: true
+    command: ./bin/osx-defaults.sh
+
