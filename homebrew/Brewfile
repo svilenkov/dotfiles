@@ -1,13 +1,18 @@
 cask_args appdir: '/Applications'
 
-tap 'caskroom/cask'
-tap 'caskroom/versions'
-
-tap 'homebrew/boneyard'
+# Tap it
+tap 'homebrew/bundle'
+tap 'homebrew/cask'
+tap 'homebrew/cask-drivers'
+tap 'homebrew/cask-fonts'
+tap 'homebrew/cask-versions'
 tap 'homebrew/core'
 tap 'homebrew/services'
-tap 'homebrew/versions'
 
+# Cask it
+cask 'firefox'
+
+# Brewwwwww
 brew 'postgresql'
 brew 'redis'
 
