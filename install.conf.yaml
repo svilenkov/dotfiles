@@ -13,7 +13,7 @@
 - link:
     ~/.zshrc: zshrc
 
-    ~/.shell/zinit:
+    ~/.shell/zinit.zsh:
       path: shell/zinit.zsh
 
     ~/.p10k.zsh:
