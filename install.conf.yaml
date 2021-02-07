@@ -41,6 +41,12 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  - 
+    stderr: true
+    stdin: true
+    stdout: true
+    command: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
   - [./vim/install.sh]
   - 
     command: ./homebrew/install.sh
