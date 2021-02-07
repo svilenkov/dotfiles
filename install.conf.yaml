@@ -22,6 +22,9 @@
     ~/.shell/aliases:
       path: shell/aliases
 
+    ~/.shell/git-st.sh:
+      path: shell/git-st.sh
+
     ~/.shell/helpers:
       path: shell/helpers
 
