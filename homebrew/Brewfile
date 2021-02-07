@@ -1,0 +1,22 @@
+cask_args appdir: '/Applications'
+
+tap 'caskroom/cask'
+tap 'caskroom/versions'
+
+tap 'homebrew/boneyard'
+tap 'homebrew/core'
+tap 'homebrew/services'
+tap 'homebrew/versions'
+
+brew 'postgresql'
+brew 'redis'
+
+brew 'pyenv'
+brew 'pyenv-virtualenv'
+
+brew 'tmux'
+brew 'wget'
+
+brew 'htop'
+
+brew 'exercism'
