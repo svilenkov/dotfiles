@@ -25,3 +25,5 @@ brew 'wget'
 brew 'htop'
 
 brew 'exercism'
+
+brew 'nvim'
