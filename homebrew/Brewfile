@@ -20,6 +20,9 @@ brew 'redis'
 brew 'pyenv'
 brew 'pyenv-virtualenv'
 
+brew 'go'
+brew 'fzf'
+
 brew 'tmux'
 brew 'wget'
 
