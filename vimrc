@@ -16,7 +16,7 @@ set shiftwidth=2
 set hidden
 
 let g:coc_global_extensions = ['coc-solargraph']
-let g:python3_host_prog = '$HOME/.pyenv/versions/3.7.4/bin/python3'
+let g:python3_host_prog = '$HOME/.pyenv/versions/'. system('pyenv latest -p | tr -d "\n"') . '/bin/python3'
 let g:python_version = '3'
 let g:neovim_rpc#py = 'python3'
 let s:pyeval = function('py3eval')

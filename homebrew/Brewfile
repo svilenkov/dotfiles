@@ -28,5 +28,6 @@ brew 'exercism'
 
 brew 'tree-sitter', args: ['HEAD']
 brew 'luajit', args: ['HEAD']
+brew 'vim'
 brew 'neovim', args: ['HEAD']
 
