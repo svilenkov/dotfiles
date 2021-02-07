@@ -26,4 +26,7 @@ brew 'htop'
 
 brew 'exercism'
 
-brew 'nvim'
+brew 'tree-sitter', args: ['HEAD']
+brew 'luajit', args: ['HEAD']
+brew 'neovim', args: ['HEAD']
+
