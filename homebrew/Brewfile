@@ -11,6 +11,7 @@ tap 'homebrew/services'
 
 # Cask it
 cask 'firefox'
+cask 'rectangle'
 
 # Brewwwwww
 brew 'postgresql'
