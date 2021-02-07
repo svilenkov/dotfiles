@@ -21,4 +21,4 @@ zinit ice wait'0a' lucid
 zinit light wfxr/forgit
 
 zinit ice wait'0b' atinit="source_aliases" lucid
-zinit snippet $HOME/.aliases
+zinit snippet $HOME/.shell/aliases
