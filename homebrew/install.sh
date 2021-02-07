@@ -1,5 +1,6 @@
 #!/bin/bash
 
+set -e
 # Installs Homebrew and some of the common dependencies needed/desired for software development
 
 # Ask for the administrator password upfront
@@ -16,11 +17,9 @@ fi
 brew update
 
 # Upgrade any already-installed formulae
-brew upgrade --all
+brew upgrade --formulae
 
-brew tap homebrew/bundle
-
-brew bundle --file=homebrew/Brewfile
+brew bundle --file=./homebrew/Brewfile
 
 brew link node
 brew install yarn
