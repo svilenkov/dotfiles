@@ -30,3 +30,7 @@ zinit light sharkdp/bat
 # fd
 zinit ice as"command" from"gh-r" mv"fd* -> fd" pick"fd/fd"
 zinit light sharkdp/fd
+
+# interactive history
+zstyle :plugin:history-search-multi-word reset-prompt-protect 1
+zinit load zdharma/history-search-multi-word

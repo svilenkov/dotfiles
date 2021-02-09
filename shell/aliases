@@ -46,6 +46,7 @@ function rndp() {
 
 
 # History
+alias hh='fc -l 0 | grep'
 alias h='history'
 
 # File/Directory

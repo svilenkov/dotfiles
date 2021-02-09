@@ -1,3 +1,11 @@
+# History
+HISTSIZE=10000
+SAVEHIST=10000
+setopt SHARE_HISTORY      # Share history between all sessions.
+setopt HIST_IGNORE_DUPS   # Don't record an entry that was just recorded again.
+setopt HIST_FIND_NO_DUPS  # Do not display a line previously found.
+setopt HIST_REDUCE_BLANKS # Remove superfluous blanks before recording entry.
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -52,9 +60,6 @@ zinit wait'!' lucid for \
 
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
-zpt 1
-zp zsh-users/zsh-history-substring-search
-
 # D.
 zinit wait lucid for \
   atinit"zicompinit; zicdreplay"  \
@@ -90,6 +95,8 @@ export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 export PATH="/usr/local/sbin:$HOME/Scripts:$HOME/openocd/bin::$PATH"
 export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
+
+export DOCKER_HOST="ssh://root@192.168.64.17"
 
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
