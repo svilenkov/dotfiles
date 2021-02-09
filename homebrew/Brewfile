@@ -30,6 +30,7 @@ brew 'wget'
 
 brew 'gawk'
 brew 'htop'
+brew 'gpg'
 
 brew 'exercism'
 
