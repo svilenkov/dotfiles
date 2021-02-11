@@ -98,9 +98,13 @@ Plug 'reasonml-editor/vim-reason-plus'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+let g:chadtree_settings = { "theme.icon_glyph_set" : 'ascii' }
 if has('nvim')
   Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
 endif
+
+let mapleader = ","
+nnoremap <leader> <cmd>CHADopen<cr>
 
 call plug#end()
 
