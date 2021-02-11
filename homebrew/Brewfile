@@ -26,6 +26,7 @@ brew 'glow'
 
 brew 'fd'
 brew 'ripgrep'
+brew 'exa'
 
 brew 'tmux'
 brew 'wget'
