@@ -106,3 +106,7 @@ alias gdc='git diff --cached'
 alias gss='~/.shell/git-st.sh'
 
 alias clean_xcode_devices='xcrun simctl delete unavailable'
+alias n='nvim'
+
+alias lebrew='brew bundle --file=$HOME/work/dotfiles/homebrew/Brewfile'
+alias ls='exa -l'
