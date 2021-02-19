@@ -82,6 +82,7 @@ source ~/.shell/helpers
 alias resrc="source ~/.zshrc"
 
 export GOPATH="$HOME/go"
+export GO111MODULE=auto
 
 alias venc='vim -i NONE -x'
 alias vopen='vim -i NONE'
@@ -96,6 +97,7 @@ export PATH="/usr/local/sbin:$HOME/Scripts:$HOME/openocd/bin::$PATH"
 export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="$(brew --prefix openssl)/bin:$PATH"
+export PATH="$(brew --prefix qt)/bin:$PATH"
 
 export DOCKER_HOST="ssh://root@192.168.64.17"
 
