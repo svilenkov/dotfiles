@@ -11,6 +11,7 @@ set laststatus=2
 set tabstop=2
 set pyxversion=3
 set shiftwidth=2
+set showtabline=0
 
 " https://stackoverflow.com/q/2414626
 set hidden
@@ -46,6 +47,18 @@ set signcolumn=yes
 
 " https://stackoverflow.com/a/28334012
 highlight clear SignColumn
+
+let g:CtrlSpaceDefaultMappingKey = "<C-space> "
+nnoremap <silent><C-p> :CtrlSpace O<CR>
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_tabs = 1
+let g:airline#extensions#tabline#show_buffers = 1
+let g:airline#extensions#tabline#show_tab_nr = 0
+let g:airline#extensions#tabline#show_splits = 1
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+
+nnoremap <leader>1 <Plug>AirlineSelectTab1
 
 call plug#begin('~/.vim/plugged')
 
@@ -95,6 +108,7 @@ Plug 'vim-test/vim-test'
 
 Plug 'reasonml-editor/vim-reason-plus'
 
+
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
@@ -104,7 +118,10 @@ if has('nvim')
 endif
 
 let mapleader = ","
-nnoremap <leader> <cmd>CHADopen<cr>
+nnoremap <leader>e <cmd>CHADopen<cr>
+nnoremap <leader>[ <cmd>Files<cr>
+
+Plug 'vim-ctrlspace/vim-ctrlspace'
 
 call plug#end()
 
@@ -126,6 +143,7 @@ inoremap <silent><expr> <TAB>
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <silent><expr> <c-space> coc#refresh()
 
 function! s:check_back_space() abort
   let col = col('.') - 1
