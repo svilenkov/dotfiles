@@ -15,7 +15,8 @@ defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool FALSE
 defaults write com.apple.finder QuitMenuItem -bool true
 
 # Fast key repeats (defaults are soooooo slow)
-defaults write -g InitialKeyRepat -int 15
+defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain InitialKeyRepeat -int 10kkkk
 
 killall Dock
 killall Finder
