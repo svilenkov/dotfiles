@@ -8,6 +8,6 @@
 [pull]
 	rebase = true
 [core]
-	autocrlf = true
+	autocrlf = input
 	whitespace = cr-at-eol
 	safecrlf = false
