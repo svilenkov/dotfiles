@@ -7,3 +7,7 @@
 	tool = opendiff
 [pull]
 	rebase = true
+[core]
+	autocrlf = true
+	whitespace = cr-at-eol
+	safecrlf = false
