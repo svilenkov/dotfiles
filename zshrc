@@ -89,7 +89,7 @@ alias vopen='vim -i NONE'
 alias vsee='vim -i NONE -M'
 
 #export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
+#export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
 
 export PATH="$PATH:$HOME/.rvm/bin:$GOPATH/bin"
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
@@ -98,6 +98,8 @@ export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="$(brew --prefix openssl)/bin:$PATH"
 export PATH="$(brew --prefix qt)/bin:$PATH"
+
+export ANDROID_HOME="/opt/homebrew/share/android-sdk"
 
 export DOCKER_HOST="ssh://root@192.168.64.17"
 
@@ -123,3 +125,4 @@ source $HOME/.shell/zinit.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[ -f "/Users/igor/.ghcup/env" ] && source "/Users/igor/.ghcup/env" # ghcup-env
