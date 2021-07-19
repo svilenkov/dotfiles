@@ -58,15 +58,15 @@ function find_last_used_file() {
 alias cl='clear'
 
 function git_backup() {
-  gss | sed -e 's/^ //' | sed '/^D / d' | sed '/^AD / d' | awk '{print $2}' | tar -czf "$HOME/Dropbox/tmp-backups/`basename $PWD`.tar.gz" -T -
+  ~/.shell/git-st.sh | sed -e 's/^ //' | sed '/^D / d' | sed '/^AD / d' | awk '{print $2}' | tail -n +2 | tar -czf "$HOME/Documents/tmp-backups/`basename $PWD`.tar.gz" -T -
 }
 
 function hg_backup() {
-  hg status | sed -e 's/^ //' | awk '{print $2}' | tar -czf "$HOME/Dropbox/tmp-backups/`basename $PWD`.tar.gz" -T -
+  hg status | sed -e 's/^ //' | awk '{print $2}' | tar -czf "$HOME/Documents/tmp-backups/`basename $PWD`.tar.gz" -T -
 }
 
 function hg_arch_backup() {
-	hg archive -t tgz "$HOME/Dropbox/hg-backups/`basename $PWD`.tar.gz"
+	hg archive -t tgz "$HOME/Documents/hg-backups/`basename $PWD`.tar.gz"
 }
 
 alias cping="ping -c 1 1.1.1.1| head -n2 | tail -n1"
@@ -101,7 +101,10 @@ function devim() {
 	printf "\e[H\e[2J\e[3J"
 }
 
+# CTRL + B <arrow key> — switch panes in this split tmux sessions
+# https://lukaszwrobel.pl/blog/tmux-tutorial-split-terminal-windows-easily/
 alias gc='tmux send "git diff --cached" C-m \; split-window -h \; send "git commit; exit" C-m'
+
 alias gdc='git diff --cached'
 alias gss='~/.shell/git-st.sh'
 
