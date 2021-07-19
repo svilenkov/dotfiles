@@ -27,6 +27,7 @@ brew 'glow'
 brew 'fd'
 brew 'ripgrep'
 brew 'exa'
+brew 'git-delta'
 
 brew 'tmux'
 brew 'wget'
@@ -34,6 +35,7 @@ brew 'wget'
 brew 'gawk'
 brew 'htop'
 brew 'gpg'
+brew 'exiftool'
 
 brew 'exercism'
 
