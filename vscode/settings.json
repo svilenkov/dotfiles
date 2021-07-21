@@ -1,0 +1,25 @@
+{
+    "breadcrumbs.icons": false,
+    "breadcrumbs.enabled": false,
+    "workbench.colorTheme": "Quiet Light",
+    "editor.minimap.enabled": false,
+    "workbench.editor.decorations.colors": true,
+    "workbench.colorCustomizations": {
+
+    "[Quiet Light]": {
+            "titleBar.activeBackground": "#372b47",
+            "titleBar.activeForeground": "#f2f2f2",
+            "statusBar.background": "#372b47",
+            "statusBar.debuggingBackground": "#705697",
+            "statusBar.noFolderBackground": "#705697",
+            "statusBarItem.remoteBackground": "#4e3c69",
+        }
+    },
+    "explorer.confirmDragAndDrop": false,
+    "explorer.autoReveal": false,
+    "files.trimTrailingWhitespace": true,
+    "editor.tabSize": 2,
+    "extensions.ignoreRecommendations": true,
+    "workbench.sideBar.location": "right",
+    "workbench.activityBar.visible": false
+}

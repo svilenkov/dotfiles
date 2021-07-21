@@ -1,0 +1,16 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+  {
+    "key": "shift+cmd+s",
+    "command": "-workbench.action.files.saveLocalFile",
+    "when": "remoteFileDialogVisible"
+  },
+  {
+    "key": "shift+cmd+s",
+    "command": "-workbench.action.files.saveAs"
+  },
+  {
+    "key": "shift+cmd+s",
+    "command": "workbench.files.action.showActiveFileInExplorer"
+  }
+]
