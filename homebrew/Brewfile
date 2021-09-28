@@ -12,8 +12,9 @@ tap 'homebrew/services'
 # Cask it
 cask 'firefox'
 cask 'rectangle'
+cask 'lens'
 
-# Brewwwwww
+# Brewwwwww it
 brew 'postgresql'
 brew 'redis'
 
@@ -44,3 +45,22 @@ brew 'luajit', args: ['HEAD']
 brew 'vim'
 brew 'neovim', args: ['HEAD']
 
+brew 'nvm'
+brew 'awscli'
+brew 'kubectl'
+brew 'helm'
+brew 'helmfile'
+brew 'https://github.com/databus23/helm-diff'
+brew 'ipfs'
+brew 'ffmpeg'
+brew 'tealdeer'
+brew 'k3sup'
+brew 'httpie'
+brew 'jq'
+brew 'lxc'
+# brew 'gromgit/fuse/XYZ-mac'
+# brew 'gromgit/fuse/sshfs-mac'
+# brew 'gromgit/fuse/sshfs-mac'
+brew 'syncthing'
+brew 'byobu'
+brew 'minicom'
