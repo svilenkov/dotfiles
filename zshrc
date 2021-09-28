@@ -101,9 +101,10 @@ export PATH="$(brew --prefix qt)/bin:$PATH"
 
 export ANDROID_HOME="/opt/homebrew/share/android-sdk"
 
-export DOCKER_HOST="ssh://root@192.168.64.17"
-
+# export DOCKER_HOST="ssh://root@192.168.64.17"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+
+export BYOBU_PREFIX=/opt/homebrew
 
 ###-tns-completion-start-###
 if [ -f $HOME/.tnsrc ]; then
@@ -126,3 +127,7 @@ source $HOME/.shell/zinit.zsh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 [ -f "/Users/igor/.ghcup/env" ] && source "/Users/igor/.ghcup/env" # ghcup-env
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
