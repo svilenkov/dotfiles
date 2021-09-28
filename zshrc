@@ -95,11 +95,20 @@ export PATH="$PATH:$HOME/.rvm/bin:$GOPATH/bin"
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 export PATH="/usr/local/sbin:$HOME/Scripts:$HOME/openocd/bin::$PATH"
 export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
-export PATH="/opt/homebrew/bin:$PATH"
-export PATH="$(brew --prefix openssl)/bin:$PATH"
-export PATH="$(brew --prefix qt)/bin:$PATH"
 
-export ANDROID_HOME="/opt/homebrew/share/android-sdk"
+case `uname` in
+	Darwin)
+		export PATH="/opt/homebrew/bin:$PATH"
+		export PATH="$(brew --prefix openssl)/bin:$PATH"
+		export PATH="$(brew --prefix qt)/bin:$PATH"
+		export ANDROID_HOME="/opt/homebrew/share/android-sdk"
+		[ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh"  # This loads nvm
+		[ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && . "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+	;;
+	Linux)
+		# Linux specifics go here
+	;;
+esac
 
 # export DOCKER_HOST="ssh://root@192.168.64.17"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
@@ -129,5 +138,4 @@ source $HOME/.shell/zinit.zsh
 [ -f "/Users/igor/.ghcup/env" ] && source "/Users/igor/.ghcup/env" # ghcup-env
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && . "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
