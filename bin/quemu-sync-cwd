@@ -1,0 +1,6 @@
+#!/bin/bash
+
+SSH_HOST=root@docker-qemu
+
+ssh $SSH_HOST mkdir -p existingdir/newdir
+rsync -avz -r --progress $PWD $SSH_HOST:$PWD 
