@@ -16,7 +16,7 @@ defaults write com.apple.finder QuitMenuItem -bool true
 
 # Fast key repeats (defaults are soooooo slow)
 defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 10kkkk
+defaults write NSGlobalDomain InitialKeyRepeat -int 10 
 
 killall Dock
 killall Finder
