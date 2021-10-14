@@ -34,3 +34,11 @@ zinit light sharkdp/fd
 # interactive history
 zstyle :plugin:history-search-multi-word reset-prompt-protect 1
 zinit load zdharma/history-search-multi-word
+
+# autolaod .nvmrc when cd into a dir that contains it
+export NVM_AUTO_USE=true
+export NVM_SYMLINK_CURRENT="true" # nvm use should make a symlink
+export NVM_DIR="$HOME/.nvm"
+export NVM_LAZY_LOAD=true
+zinit ice wait'0a' lucid
+zinit light lukechilds/zsh-nvm 
