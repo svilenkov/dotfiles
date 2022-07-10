@@ -113,3 +113,7 @@ alias n='nvim'
 
 alias lebrew='brew bundle --file=$HOME/work/dotfiles/homebrew/Brewfile'
 alias ls='exa -l'
+
+function subl(){
+	nohup ~/.shell/subl.sh $@ >/dev/null 2>&1 &
+}
