@@ -97,7 +97,7 @@ alias pgstop="pg_ctl -D /usr/local/var/postgres stop"
 
 function devim() {
 	printf "\e[H\e[2J\e[3J"
-	bash -c "vim -u NONE $@ || exit"
+	bash -c "vim -u NONE -c 'set nocompatible' $@ || exit"
 	printf "\e[H\e[2J\e[3J"
 }
 

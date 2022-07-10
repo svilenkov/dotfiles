@@ -138,3 +138,4 @@ source $HOME/.shell/zinit.zsh
 export NVM_DIR="$HOME/.nvm"
 
 export PATH="/usr/local/opt/curl/bin:$PATH"
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

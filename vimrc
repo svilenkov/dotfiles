@@ -75,26 +75,21 @@ Plug 'justinmk/vim-sneak'
 " UI enhancements
 Plug 'itchyny/lightline.vim'
 Plug 'machakann/vim-highlightedyank'
-
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-
-" Use release branch (recommend)
-Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'yarn install --frozen-lockfile'}
-
 Plug 'MicahElliott/Rocannon'
-
 Plug 'preservim/tagbar'
 
 " https://stackoverflow.com/questions/26788786
 Plug 'preservim/nerdcommenter'
 
-"if has('nvim')
+if has('nvim')
 "  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-"else
+	Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'yarn install --frozen-lockfile'}
+else
 "  Plug 'Shougo/deoplete.nvim'
 "  Plug 'roxma/nvim-yarp'
 "  Plug 'roxma/vim-hug-neovim-rpc'
-"endif
+endif
 
 "Plug 'Shougo/echodoc.vim'
 

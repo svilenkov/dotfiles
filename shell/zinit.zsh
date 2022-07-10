@@ -17,6 +17,10 @@ function source_aliases() {
   source ~/.shell/aliases
 }
 
+function source_nvm_completion() {
+  source $NVM_DIR/bash_completion
+}
+
 zinit ice wait'0a' lucid
 zinit light wfxr/forgit
 
@@ -35,8 +39,16 @@ zinit light sharkdp/fd
 zstyle :plugin:history-search-multi-word reset-prompt-protect 1
 zinit load zdharma/history-search-multi-word
 
-export NVM_SYMLINK_CURRENT="true"
+
+# autolaod .nvmrc when cd into a dir that contains it
+export NVM_AUTO_USE=true
+export NVM_SYMLINK_CURRENT="true" # nvm use should make a symlink
+export NVM_DIR="$HOME/.nvm"
 export NVM_LAZY_LOAD=true
 export NVM_COMPLETION="true"
 
-NVM_COMPLETION=true zinit wait lucid light-mode for lukechilds/zsh-nvm
+zinit ice wait'0a' lucid
+zinit light lukechilds/zsh-nvm
+
+zinit ice wait'0b' atinit="source_nvm_completion" lucid
+zinit snippet $HOME/.shell/aliases
