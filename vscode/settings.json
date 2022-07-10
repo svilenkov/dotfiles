@@ -1,7 +1,7 @@
 {
     "breadcrumbs.icons": false,
     "breadcrumbs.enabled": false,
-    "workbench.colorTheme": "Quiet Light",
+    "workbench.colorTheme": "Nord Light",
     "editor.minimap.enabled": false,
     "workbench.editor.decorations.colors": true,
     "workbench.colorCustomizations": {
@@ -20,6 +20,33 @@
     "files.trimTrailingWhitespace": true,
     "editor.tabSize": 2,
     "extensions.ignoreRecommendations": true,
+    "focus.highlightRange": "none",
+    "explorer.confirmDelete": false,
+    "redhat.telemetry.enabled": false,
+    "haskell.serverExecutablePath": "haskell-language-server",
+    "focus.opacity": "0.4",
+    "haskell.trace.server": "messages",
+    "haskell.trace.client": "debug",
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.largeFileOptimizations": false,
+    "[shellscript]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+    "go.toolsManagement.autoUpdate": true,
     "workbench.sideBar.location": "right",
-    "workbench.activityBar.visible": false
+    "workbench.preferredDarkColorTheme": "Solarized Dark",
+    "workbench.preferredHighContrastLightColorTheme": "Quiet Light",
+    "workbench.preferredHighContrastColorTheme": "Lilac",
+    "workbench.preferredLightColorTheme": "Nord Light",
+    "window.zoomLevel": 1,
+    "go.lintTool": "revive",
+    "go.lintFlags": [
+        "-config ./.revive.toml -formatter unix"
+    ],
+    "rust-analyzer.inlayHints.typeHints.enable": false,
+    "rust-analyzer.inlayHints.parameterHints.enable": false,
+    "workbench.editorAssociations": {
+        "*.car": "hexEditor.hexedit"
+    },
+    "go.formatTool": "gofmt"
 }
