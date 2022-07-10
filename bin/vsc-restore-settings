@@ -4,11 +4,11 @@ UserData='unknown-location'
 UserConfig='vscode'
 UserExtensions="$UserConfig/.extensions"
 CodeDir='Code'
-CodeExecutable='code-insiders'
+CodeExecutable='code'
 
 case "$CodeExecutable" in
-	"code-insiders")
-		CodeDir="Code - Insiders"
+	"code")
+		CodeDir="Code"
 		;;
 esac
 
