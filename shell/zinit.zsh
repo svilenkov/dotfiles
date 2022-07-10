@@ -34,3 +34,9 @@ zinit light sharkdp/fd
 # interactive history
 zstyle :plugin:history-search-multi-word reset-prompt-protect 1
 zinit load zdharma/history-search-multi-word
+
+export NVM_SYMLINK_CURRENT="true"
+export NVM_LAZY_LOAD=true
+export NVM_COMPLETION="true"
+
+NVM_COMPLETION=true zinit wait lucid light-mode for lukechilds/zsh-nvm
