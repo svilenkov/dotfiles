@@ -102,8 +102,8 @@ case `uname` in
 		export PATH="$(brew --prefix openssl)/bin:$PATH"
 		export PATH="$(brew --prefix qt)/bin:$PATH"
 		export ANDROID_HOME="/opt/homebrew/share/android-sdk"
-		[ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh"  # This loads nvm
-		[ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && . "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+		# [ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh"  # This loads nvm
+		# [ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && . "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 	;;
 	Linux)
 		# Linux specifics go here
@@ -131,11 +131,10 @@ zinit snippet $HOME/.shell/goto.sh
 
 source $HOME/.shell/zinit.zsh
 
-# zprof
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 [ -f "/Users/igor/.ghcup/env" ] && source "/Users/igor/.ghcup/env" # ghcup-env
 
 export NVM_DIR="$HOME/.nvm"
 
+export PATH="/usr/local/opt/curl/bin:$PATH"

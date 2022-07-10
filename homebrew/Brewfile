@@ -33,6 +33,7 @@ brew 'git-delta'
 
 brew 'tmux'
 brew 'wget'
+brew 'curl' # GNU Curl
 
 brew 'gawk'
 brew 'htop'
