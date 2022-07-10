@@ -6,7 +6,7 @@
 [merge]
 	tool = opendiff
 [pull]
-	rebase = true
+	rebase = false
 [core]
 	autocrlf = input
 	whitespace = cr-at-eol
