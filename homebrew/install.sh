@@ -19,7 +19,7 @@ brew update
 # Upgrade any already-installed formulae
 brew upgrade --formulae
 
-brew bundle --file=./homebrew/Brewfile
+brew bundle --no-lock --file=./homebrew/Brewfile
 
 brew link node
 brew install yarn

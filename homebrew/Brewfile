@@ -14,11 +14,11 @@ cask 'firefox'
 cask 'rectangle'
 cask 'lens'
 cask 'visual-studio-code'
+cask 'openvpn-connect'
 
 # Brewwwwww it
 brew 'postgresql'
 brew 'redis'
-
 brew 'pyenv'
 brew 'pyenv-virtualenv'
 
@@ -68,3 +68,7 @@ brew 'lxc'
 brew 'syncthing'
 brew 'byobu'
 brew 'minicom'
+
+brew 'hwatch'
+brew 'vault'
+
