@@ -8,67 +8,104 @@ tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/core'
 tap 'homebrew/services'
+tap 'tclass/cloud_sql_proxy'
+tap 'iina/homebrew-mpv-iina'
 
 # Cask it
-cask 'firefox'
 cask 'rectangle'
 cask 'lens'
 cask 'visual-studio-code'
 cask 'openvpn-connect'
+cask 'google-cloud-sdk'
+cask 'lens'
 
 # Brewwwwww it
+
+# Formula/a
+brew 'awscli'
+
+# Formula/b
+brew 'byobu'
+
+# Formula/c
+brew 'cloud_sql_proxy'
+brew 'curl' # GNU Curl
+
+# Formula/e
+brew 'exa'
+brew 'exercism'
+brew 'exiftool'
+
+# Formula/f
+brew 'fd'
+brew 'ffmpeg'
+brew 'fzf'
+
+# Formula/g
+brew 'gawk'
+brew 'git-delta'
+brew 'glow'
+brew 'go'
+brew 'gpg'
+
+# Formula/h
+brew 'helm'
+brew 'helmfile'
+brew 'htop'
+brew 'httpie'
+brew 'hwatch'
+
+# Formula/i
+brew 'ipfs'
+
+# Formula/j
+brew 'jq'
+
+# Formula/k
+brew 'k3sup'
+
+# https://github.com/kubernetes-sigs/kind
+brew 'kind'
+
+# Formula/l
+brew 'luajit', args: ['HEAD']
+brew 'lxc'
+
+# Formula/m
+brew 'minicom'
+
+# Formula/n
+brew 'neovim', args: ['HEAD']
+brew 'nvm'
+
+# Formula/p
 brew 'postgresql'
-brew 'redis'
 brew 'pyenv'
 brew 'pyenv-virtualenv'
 
-brew 'go'
-brew 'fzf'
-brew 'glow'
-
-brew 'fd'
+# Formula/r
+brew 'redis'
 brew 'ripgrep'
-brew 'exa'
-brew 'git-delta'
 
-brew 'tmux'
-brew 'wget'
-brew 'curl' # GNU Curl
+# Formula/s
+brew 'syncthing'
 
-brew 'gawk'
-brew 'htop'
-brew 'gpg'
-brew 'exiftool'
-
-brew 'exercism'
-
-brew 'tree-sitter', args: ['HEAD']
-brew 'luajit', args: ['HEAD']
-brew 'vim'
-brew 'neovim', args: ['HEAD']
-
-brew 'nvm'
-brew 'awscli'
-brew 'kubectl'
-brew 'helm'
-brew 'helmfile'
+# Formula/t
+brew 'tealdeer'
 brew 'terraform'
+brew 'tmux'
+brew 'tree-sitter', args: ['HEAD']
+
+# Formula/v
+brew 'vault'
+brew 'vim'
+
+# Formula/w
+brew 'wget'
+
 # disable until figure out how to work with github URLs
 # brew 'https://github.com/databus23/helm-diff'
-brew 'ipfs'
-brew 'ffmpeg'
-brew 'tealdeer'
-brew 'k3sup'
-brew 'httpie'
-brew 'jq'
-brew 'lxc'
+
 # brew 'gromgit/fuse/XYZ-mac'
 # brew 'gromgit/fuse/sshfs-mac'
 # brew 'gromgit/fuse/sshfs-mac'
-brew 'syncthing'
-brew 'byobu'
-brew 'minicom'
-
-brew 'hwatch'
-brew 'vault'
-
