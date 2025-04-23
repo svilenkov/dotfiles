@@ -117,3 +117,28 @@ alias ls='exa -l'
 function subl(){
 	nohup ~/.shell/subl.sh $@ >/dev/null 2>&1 &
 }
+
+# K8S
+function kgs(){
+	kubectl get secret -n $1 -o json | jq -r '.items[] | select(.data.token) | .data.token' | while IFS= read -r line; do echo "$line" | base64 -D; echo; done
+}
+
+
+alias dnsquery='dscacheutil -q host -a name'
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+function ts-by-tag() {
+  tailscale status --json | jq -r ".Peer[] | select(.Tags?[]? | contains(\"tag:${1}\")) | .HostName"
+}
+
+alias lls='limactl ls'
+
+
+function rgp() {
+  rg --color=always -A5 -B5 "${1}" | bat -p --color=always
+}
+
+function check_mullvad_reddit() {
+  curl -s https://api.mullvad.net/www/relays/wireguard | \
+        jq -r '.[] | .socks_name + ":" + (.socks_port|tostring)' | \
+        rush -j 10 'echo -n "{} "; curl --socks5 "{}" --head "https://old.reddit.com/" -w "%{http_code}" -o /dev/null -s --retry 5 --retry-max-time 15; echo'
+}
