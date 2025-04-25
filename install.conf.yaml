@@ -31,12 +31,18 @@
     ~/.shell/goto.sh:
       path: shell/goto.sh
 
+    ~/.shell/gpg_ready.zsh:
+      path: shell/gpg_ready.zsh/
+
     ~/.shell/subl.sh:
       path: shell/subl.sh
 
     ~/.vimrc: vimrc
 
-    ~/.config/nvim/init.vim:
+    ~/.config/nvim/init.lua:
+      path: vim/init.lua
+
+    ~/.config/nvim/legacy.vim:
       path: vim/init.vim
 
     ~/.gitconfig:
