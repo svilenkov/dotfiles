@@ -1,0 +1,11 @@
+# Build the Swift helper and place link
+
+- create:
+  - build/bin
+
+- shell:
+  - [bash osx/build_copy_clipboard.sh, Build Swift clipboard helper]
+
+- link:
+    ~/.local/bin/copyFileToClipboard:
+      path: build/bin/copyFileToClipboard
