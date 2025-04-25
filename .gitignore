@@ -1,3 +1,5 @@
 syncLocalSettings.json
 .DS_Store
 .vscode
+build/**
+!build/.keep
