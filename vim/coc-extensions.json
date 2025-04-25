@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "coc-rust-analyzer": ">=0.72.1",
+    "coc-snippets": ">=3.4.3",
+    "coc-solargraph": ">=1.2.4",
+    "coc-clangd": ">=0.32.0"
+  },
+  "disabled": [],
+  "locked": []
+}

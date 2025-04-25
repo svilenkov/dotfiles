@@ -1,6 +1,7 @@
 z_lucid() {
   zinit ice lucid ver'master' "$@"
 }
+
 zi0a() {
   z_lucid wait'0a' "$@"
 }
@@ -21,6 +22,17 @@ function source_nvm_completion() {
   source $NVM_DIR/bash_completion
 }
 
+function source_lima_completion() {
+	source <(limactl completion zsh)
+}
+
+function source_gcloud_completion() {
+	source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+}
+
+#zi ice pick"async.zsh" src"pure.zsh"
+#zi light sindresorhus/pure
+
 zinit ice wait'0a' lucid
 zinit light wfxr/forgit
 
@@ -37,7 +49,10 @@ zinit light sharkdp/fd
 
 # interactive history
 zstyle :plugin:history-search-multi-word reset-prompt-protect 1
-zinit load zdharma/history-search-multi-word
+
+#zinit load zdharma-continuum/history-search-multi-word
+zinit load z-shell/H-S-MW
+zinit light zsh-users/zsh-syntax-highlighting
 
 
 # autolaod .nvmrc when cd into a dir that contains it
@@ -52,3 +67,15 @@ zinit light lukechilds/zsh-nvm
 
 zinit ice wait'0b' atinit="source_nvm_completion" lucid
 zinit snippet $HOME/.shell/aliases
+
+zinit ice wait'0c' atinit="source_gcloud_completion" lucid
+zinit snippet $HOME/.shell/aliases
+
+zinit ice wait'0d' atinit="source_lima_completion" lucid
+zinit snippet $HOME/.shell/aliases
+
+zinit ice as"program" cp"httpstat.sh -> httpstat" pick"httpstat"
+zinit light b4b4r07/httpstat
+
+zinit ice wait'0d' lucid
+zinit snippet ~/.shell/gpg_ready.zsh

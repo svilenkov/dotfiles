@@ -1,6 +1,60 @@
 {
+	"hover.floatConfig": {
+    "border": true
+
+  },
+  "clangd.arguments": [
+    "--background-index",
+    "--all-scopes-completion",
+    "--completion-style=detailed",
+    "--header-insertion=never",
+		"-I./rtemsbsd/include",
+		"-I./freebsd/sys",
+		"-I./rtems_waf"
+  ],
+	"suggest.detailField": "menu",
+	"suggest.triggerAfterInsertEnter": true,
+	"suggest.noselect": false,
+	"signature.enable": true,
   "codeLens.enable": true,
+	"coc.preferences.useQuickfixForLocations": true,
   "solargraph.useBundler": true,
-	"elixirLS.dialyzerEnabled": false
+	"elixirLS.dialyzerEnabled": false,
+  "terraform": {
+			"command": "terraform-ls",
+			"args": ["serve"],
+			"filetypes": [
+				"terraform",
+				"tf"
+			],
+			"initializationOptions": {},
+			"settings": {}
+  },
+  "snippets.ultisnips.pythonPrompt": false,
+	"languageserver": {
+		"ccls": {
+				"command": "ccls",
+				"filetypes": ["c", "cpp", "objc", "objcpp"],
+				"rootPatterns": [".ccls", "compile_commands.json", ".git"],
+				"initializationOptions": {
+					"cache": {
+						"directory": ".ccls-cache"
+					},
+					"index": {
+						"threads": 4,
+						"comments": 2,
+						"trackDependency": 2
+					},
+					"clang": {
+						"extraArgs": [],
+						"excludeArgs": []
+					},
+					"completion": {
+						"detailedLabel": true,
+						"placeholder": true
+					}
+				}
+			}
+	}
 }
 
